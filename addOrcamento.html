@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cadastrar Cliente - Fábrica de Festas</title>
+
+ <link href="css/bootstrap.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+ <style type="text/css">
+  .btn {
+    padding: 10px !important;
+    font-size: 20px;
+}
+.container{padding-bottom: 40px;}
+ </style>
+
+</head>
+ <body background="imagens/bg.png">
+
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fun Factory</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+    <li><a href="add.html">Clientes</a></li>
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orçamento <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="addOrcamento.html">Criar</a></li>
+            <li><a href="#">Recuperar</a></li>
+          </ul>
+        </li>
+    <li><a href="#">Produtos</a></li>
+        <li><a href="#">Lista de Relatórios</a></li>
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estoque <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dar entrada</a></li>
+            <li><a href="#">Dar baixa</a></li>
+          </ul>
+        </li>
+      </ul>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>  
+
+<div class="container">
+  <div class="row">
+      <div id="main" class="container-fluid">
+  
+  <h3 class="page-header">Criar Orçamento</h3>
+  
+
+  <div class="form-group col-md-2" style="margin-left: 724px;margin-top: -73px;">
+    <a href="#" class="btn btn-default">IMPRIMIR</a>
+  </div>
+
+  <div class="form-group col-md-2" style="margin-left: 854px;  margin-top: -67px;">
+    <div class="checkbox">
+      <label><input type="checkbox" checked value="">APROVADO</label>
+    </div>  
+  </div>
+
+  <form action="index.html">
+    <div class="col-md-12">
+        <div class="row">
+          <div class="form-group col-md-2">
+            <label for="exampleInputEmail1">Número do Cliente:</label>
+          </div>
+          <div class="form-group col-md-2">
+            
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="01">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Cliente:</label>
+          </div>
+        <div class="form-group col-md-4">
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="José da Silva">
+          </div>
+        </div>
+          
+      
+
+        <div class="row">
+            <div class="form-group col-md-1">
+              <label for="exampleInputEmail1">Data Orçamento:</label>
+            </div>
+            <div class="form-group col-md-2">
+              <input type="email" class="form-control" id="exampleInputEmail1" value="14/03/2016" placeholder="José da Silva">
+            </div>
+
+            <div class="form-group col-md-1">
+              <label for="exampleInputEmail1">Data da Festa:</label>
+            </div>
+            <div class="form-group col-md-2">
+              <input type="email" class="form-control" id="exampleInputEmail1" value="23/09/2016" placeholder="José da Silva">
+            </div>
+
+            <div class="form-group col-md-1">
+              <label for="exampleInputEmail1">Tema da Festa:</label>
+            </div>
+            <div class="form-group col-md-2">
+              <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Festa de Aniversário">
+            </div>
+
+            <div class="form-group col-md-1" >
+            <div class="checkbox">
+              <label><input type="checkbox" checked value="">ENTREGA</label>
+            </div>
+            
+           </div>
+        </div>
+          
+        <div class="row">
+            <div class="form-group col-md-1">
+              <label for="exampleInputEmail1">Observações</label>
+            </div>
+
+            <div class="form-group col-md-8">
+              <textarea class="form-control" rows="5" id="comment">Observações...</textarea>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="row">
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Nº:</label>
+            <span>01</span>
+          </div>
+
+          <div class="form-group col-md-2">
+            <div class="form-group">
+              <label for="sel1">Produto</label><br>
+                <select class="form-control" id="sel1">
+                  <option>Produto 1</option>
+                  <option>Produto 2</option>
+                  <option>Produto 3</option>
+                  <option>Produto 4</option>
+                </select>
+              </div>
+          </div>
+          
+          <div class="form-group col-md-2">
+            <label for="sel1">Quantidade</label><br>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="20">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Preço:</label>
+            <span>R$ 59,90</span>
+          </div>
+
+          <div class="form-group col-md-1">
+            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal" style="  margin-top: 11px;  padding: 10px !important;  padding-top: 5px !important;  padding-bottom: 5px !important;">Excluir</a>
+          </div>
+
+
+           
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Nº:</label>
+            <span>02</span>
+          </div>
+
+          <div class="form-group col-md-2">
+            <div class="form-group">
+              <label for="sel1">Produto</label><br>
+                <select class="form-control" id="sel1">
+                  <option>Produto 2</option>
+                  <option>Produto 2</option>
+                  <option>Produto 3</option>
+                  <option>Produto 4</option>
+                </select>
+              </div>
+          </div>
+          
+          <div class="form-group col-md-2">
+            <label for="sel1">Quantidade</label><br>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="20">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Preço:</label>
+            <span>R$ 59,90</span>
+          </div>
+
+          <div class="form-group col-md-1">
+            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal" style="  margin-top: 11px;  padding: 10px !important;  padding-top: 5px !important;  padding-bottom: 5px !important;">Excluir</a>
+          </div>
+
+          
+           
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Nº:</label>
+            <span>03</span>
+          </div>
+
+          <div class="form-group col-md-2">
+            <div class="form-group">
+              <label for="sel1">Produto</label><br>
+                <select class="form-control" id="sel1">
+                  <option>Produto 3</option>
+                  <option>Produto 2</option>
+                  <option>Produto 3</option>
+                  <option>Produto 4</option>
+                </select>
+              </div>
+          </div>
+          
+          <div class="form-group col-md-2">
+            <label for="sel1">Quantidade</label><br>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="20">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleInputEmail1">Preço:</label>
+            <span>R$ 59,90</span>
+          </div>
+
+          <div class="form-group col-md-1">
+            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal" style="  margin-top: 11px;  padding: 10px !important;  padding-top: 5px !important;  padding-bottom: 5px !important;">Excluir</a>
+          </div>
+
+          
+           
+        </div>
+
+        <div class="row" style="  padding-bottom: 20px;  font-size: 21px;">
+          <label for="exampleInputEmail1">Valor Total:</label>
+          <span>R$ 179,70</span>
+        </div>
+      
+      <div class="row">
+          <div class="form-group col-md-4">
+              <div class="row">
+                <a class="btn btn-success btn-xs" href="view.html">Adicinar Produto</a>
+                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir Produto</a>
+              </div>
+          </div>
+        </div>
+        <hr>
+    </div>  
+
+  
+    
+  
+  
+  <div class="row">
+
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="template.html" class="btn btn-default">Cancelar</a>
+    </div>
+  </div>
+
+  </form>
+ </div>
+  </div>
+</div>
+
+<br><br><br>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

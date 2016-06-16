@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cadastrar Cliente - Fábrica de Festas</title>
+
+ <link href="css/bootstrap.css" rel="stylesheet">
+ <link href="css/sweetalert.css" rel="stylesheet">
+ <style type="text/css">
+  .btn {
+    padding: 10px !important;
+    font-size: 20px;
+    width: 130px;
+}
+.container{padding-bottom: 40px;}
+ </style>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/jquery.mask.min.js"></script>
+ <script src="js/sweetalert.min.js"></script>
+ <script type="text/javascript">
+
+   $(document).ready(function(){
+      $('#telefone').mask('(00) 0000-00000');
+      $("#success").hide();
+
+      $('#addCliente').on('click', function () {
+        var nome  = $("#nome").val();
+        var email  = $("#email").val();
+        var endereco  = $("#endereco").val();
+        var telefone  = $("#telefone").val();
+
+
+
+        if (nome == '' || email == '' || endereco == '' || telefone == '') {
+              alert("Existem campos que não foram preenchidos corretamente.");
+              return false;
+        }else{
+          var $btn = $(this).button('loading');
+          setTimeout(function(){
+            $btn.button('reset');
+            $("#success").fadeIn('slow');
+            $(".form-control").val('');
+            swal("Bom Trabalho!", "Dados inseridos com sucesso.", "success")
+
+          }, 1000);
+
+        }
+
+
+
+      })
+
+
+   });
+
+ </script>
+</head>
+ <body background="imagens/bg.png">
+
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fábrica de Festas</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+    <li>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+              <li><a href="add.html">Novo Cliente</a></li>
+              <li><a href="index.html">Recuperar Cliente</a></li>
+          </ul>
+    </li>
+
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orçamento <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="addOrcamento.html">Criar</a></li>
+            <li><a href="#">Recuperar</a></li>
+          </ul>
+        </li>
+    <li><a href="#">Produtos</a></li>
+        <li><a href="#">Lista de Relatórios</a></li>
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estoque <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dar entrada</a></li>
+            <li><a href="#">Dar baixa</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <div class="row">
+      <div id="main" class="container-fluid">
+
+  <h3 class="page-header">Adicionar Cliente</h3>
+  <div class="alert alert-success" id="success" role="alert"><b>Dados inseridos com sucesso!</b></div>
+    <div class="col-md-4">
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="exampleInputEmail1">Nome</label>
+            <input type="name" class="form-control" id="nome" required placeholder="José da Silva">
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="form-group col-md-12">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="email" required placeholder="email@meuemail.com">
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="form-group col-md-12">
+            <label for="exampleInputEmail1">Endereço</label>
+            <input type="text" class="form-control" id="endereco" required placeholder="R. Das Alamedas">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="form-group col-md-12">
+            <label for="exampleInputEmail1">Telefone</label>
+            <input type="phone" class="form-control" id="telefone" required placeholder="(85) 98960-0371">
+          </div>
+        </div>
+    </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button"  id="addCliente" class="btn btn-primary" data-loading-text="Salvando..." autocomplete="off">Salvar</button>
+    <a href="template.html" class="btn btn-default">Cancelar</a>
+    </div>
+  </div>
+
+ </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
